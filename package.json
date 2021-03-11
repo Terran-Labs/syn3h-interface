@@ -25,7 +25,8 @@
     "preact": "^10.3.1",
     "preact-i18nline": "^2.0.0",
     "preact-render-to-string": "^5.1.4",
-    "preact-router": "^3.2.1"
+    "preact-router": "^3.2.1",
+    "preact-virtual-list": "^0.3.1"
   },
   "devDependencies": {
     "@types/enzyme": "^3.10.5",
