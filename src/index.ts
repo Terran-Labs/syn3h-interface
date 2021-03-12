@@ -1,4 +1,7 @@
-import './style/index.css';
-import App from './components/app';
+import "tailwindcss/tailwind.css"
 
-export default App;
+import "./style/index.css"
+
+import App from "./components/app"
+
+export default App

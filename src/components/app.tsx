@@ -1,5 +1,4 @@
-import "tailwindcss/tailwind.css"
-
+// @ts-nocheck
 import { FunctionalComponent, h } from "preact"
 import { Scrollbars } from "preact-custom-scrollbars"
 import { Route, Router } from "preact-router"
@@ -22,9 +21,9 @@ const App: FunctionalComponent = () => {
                         <Route path="/" component={Home} />
                         <Route path="/settings/" component={Profile} user="me" />
                         <Route path="/me" component={Profile} user="me" />
-                        {/* <Route path="/profile/:user" component={Profile} /> */}
                         <Route path="/dev" component={Dev} />
                         <NotFoundPage default />
+                        {/* <Route path="/profile/:user" component={Profile} /> */}
                     </Router>
                 </Scrollbars>
             </div>
