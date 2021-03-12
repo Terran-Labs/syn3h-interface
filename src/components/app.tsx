@@ -1,27 +1,35 @@
-import { FunctionalComponent, h } from 'preact';
-import { Route, Router } from 'preact-router';
-import { Provider } from "redux-zero/preact";
+import "tailwindcss/tailwind.css"
 
-import store from "./appStore";
-import Home from '../routes/home';
-import Profile from '../routes/profile';
-import NotFoundPage from '../routes/notfound';
-import Header from './header';
+import { FunctionalComponent, h } from "preact"
+import { Scrollbars } from "preact-custom-scrollbars"
+import { Route, Router } from "preact-router"
+import { Provider } from "redux-zero/preact"
+
+import Dev from "../routes/dev"
+import Home from "../routes/home"
+import NotFoundPage from "../routes/notfound"
+import Profile from "../routes/profile"
+import store from "./appStore"
+import Header from "./header"
 
 const App: FunctionalComponent = () => {
     return (
-        <div id="app">
-            <Provider store={store}>
+        <Provider store={store}>
+            <div id="app">
                 <Header />
-                <Router>
-                    <Route path="/" component={Home} />
-                    <Route path="/profile/" component={Profile} user="me" />
-                    <Route path="/profile/:user" component={Profile} />
-                    <NotFoundPage default />
-                </Router>
-            </Provider>
-        </div>
-    );
-};
+                <Scrollbars style={{ width: "100%", height: "100%" }}>
+                    <Router>
+                        <Route path="/" component={Home} />
+                        <Route path="/settings/" component={Profile} user="me" />
+                        <Route path="/me" component={Profile} user="me" />
+                        {/* <Route path="/profile/:user" component={Profile} /> */}
+                        <Route path="/dev" component={Dev} />
+                        <NotFoundPage default />
+                    </Router>
+                </Scrollbars>
+            </div>
+        </Provider>
+    )
+}
 
-export default App;
+export default App

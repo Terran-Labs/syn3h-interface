@@ -18,3 +18,11 @@ html, body {
 #app {
 	height: 100%;
 }
+
+/* Glassmorphism testing */
+.glass {
+  background: rgba(255,255,255,0.4);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.2);
+}
