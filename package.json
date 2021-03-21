@@ -22,6 +22,7 @@
   },
   "dependencies": {
     "@tailwindcss/forms": "^0.2.1",
+    "firebase": "^8.3.1",
     "i18nline": "^2.0.1",
     "node-sass": "^5.0.0",
     "preact": "^10.3.1",
@@ -62,11 +63,5 @@
       "<rootDir>/tests/__mocks__/browserMocks.ts",
       "<rootDir>/tests/__mocks__/setupTests.ts"
     ]
-  },
-  "importSort": {
-    ".js": {
-      "parser": "babylon",
-      "style": "import-sort-style-module"
-    }
   }
 }
